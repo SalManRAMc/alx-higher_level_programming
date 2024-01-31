@@ -2,10 +2,12 @@
 import random
 number = random.randint(-10000, 10000)
 
-if number >= 0:
+if number % 10 == 0:
+    lastdigit = 0
+elif number >= 0:
     lastdigit = number % 10
 else:
-    lastdigit = 10 - (number % 10)
+    lastdigit = -(10 - (number % 10))
 
 print("Last digit of", number, "is", lastdigit, end=" ")
 
