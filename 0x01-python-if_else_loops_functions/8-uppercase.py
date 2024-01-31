@@ -6,4 +6,4 @@ def uppercase(str):
         if (str[i] == " "):
             print(" ")
         else:
-            print("{:c}".format(chr(i + 32))
+            print("{:c}".format(chr(i + 32)))
