@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 
 def print_matrix_integer(matrix=[[]]):
+
     rowlength = len(submatrix)
     if not matrix:
         return None
