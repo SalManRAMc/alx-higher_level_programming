@@ -3,6 +3,8 @@
 """
   This is a power function
 """
+
+
 def pow(a, b):
     result = 1
     if b < 0:
