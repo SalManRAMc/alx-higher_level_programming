@@ -8,7 +8,7 @@ def safe_print_list(my_list=[], x=0):
             print(my_list[i], end="")
             realnumbers += 1
             i += 1
-        print("")
+        print("\n")
         return (realnumbers)
     except (IndexError):
-        print("You are trying to access an unreachable index")
+        print("")
