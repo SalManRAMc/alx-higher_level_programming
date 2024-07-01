@@ -6,8 +6,9 @@ def safe_print_division(a, b):
         Prints the result of a division
     """
     try:
-        result = a / b
-    except (TypeError, ValueError, ZeroDivisionError):
+        result = a / float(b)
+    except (ZeroDivisionError):
         result = None
     finally:
         print("Inside result: {}".format(result))
+    return (result)
