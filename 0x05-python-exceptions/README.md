@@ -9,3 +9,4 @@ of the code stopping
 
 Difference Between TypeError And ValueError is:
 
+IndexError
