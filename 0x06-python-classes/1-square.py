@@ -6,7 +6,7 @@ add a little more
 """
 
 
-class square:
+class Square:
     """This is the object documentation"""
     __size = 0
 
