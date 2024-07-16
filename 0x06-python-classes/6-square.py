@@ -34,7 +34,11 @@ class Square:
 
     @position.setter
     def position(self, value):
-        if isinstance(value, tuple) and all(isinstance(i, int) for i in value):
+        if (
+            isinstance(value, tuple) and 
+            all(isinstance(i, int) for i in value) and
+            len(value) == 2
+        ):
             self.__position = (value)
         else:
             raise TypeError("position must be a tuple of 2 positive integers")
@@ -44,22 +48,17 @@ class Square:
         return (self.__size * self.__size)
 
     def my_print(self):
-        i, j, k = 0, 0, 0
-        if (self.size > 0):
-            while (i < self.size):
-                j = 0
-                k = 0
-                while (j < self.size):
-                    while (k < self.position[0]):
-                        print(" ", end='')
-                        k += 1
-                    print("#", end='')
-                    j += 1
-                print()
-                i += 1
-                k = 0
-            while (k < self.position[1]):
-                print()
-                k += 1
-        else:
+        if self.size == 0:
             print()
+            return
+
+        # Print the vertical offset
+        for j in range(self.position[1]):
+            print()
+
+        for i in range(self.size):
+            # Print the horizontal offset
+            print(" " * self.position[0], end='')
+            print("#" * self.size)
+
+
