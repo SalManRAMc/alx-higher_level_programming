@@ -11,7 +11,7 @@ class Square:
     __size = 0
 
     def __init__(self, size=0):
-        self.size = size  # Not sure if this is calling the method or just using the setter thanks to the decorator
+        self.size = size
 
     @property  # decorator used to indicate a getter
     def size(self):
