@@ -35,7 +35,7 @@ class Square:
     @position.setter
     def position(self, value):
         if (
-            isinstance(value, tuple) and 
+            isinstance(value, tuple) and
             all(isinstance(i, int) for i in value) and
             len(value) == 2
         ):
@@ -60,5 +60,3 @@ class Square:
             # Print the horizontal offset
             print(" " * self.position[0], end='')
             print("#" * self.size)
-
-
