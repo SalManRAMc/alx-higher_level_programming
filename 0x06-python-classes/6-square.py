@@ -36,7 +36,7 @@ class Square:
     def position(self, value):
         if (
             isinstance(value, tuple) and
-            all(isinstance(i, int) for i in value) and
+            all(isinstance(i, int) and i >= 0 for i in value) and
             len(value) == 2
         ):
             self.__position = (value)
