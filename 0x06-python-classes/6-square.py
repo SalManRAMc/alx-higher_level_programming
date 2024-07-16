@@ -57,5 +57,9 @@ class Square:
                     j += 1
                 print()
                 i += 1
+                k = 0
+            while (k < self.position[1]):
+                print()
+                k += 1
         else:
             print()
